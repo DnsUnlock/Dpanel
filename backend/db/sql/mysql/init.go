@@ -12,7 +12,7 @@ func Conn() (dB *gorm.DB, err error) {
 	dB, err = gorm.Open(
 		mysql.New(
 			mysql.Config{
-				DSN:                       config.Config.Database.Connection,
+				DSN:                       config.Config.Sql.Connection,
 				SkipInitializeWithVersion: false,
 			},
 		),
@@ -29,8 +29,8 @@ func Conn() (dB *gorm.DB, err error) {
 	if err != nil {
 		return
 	}
-	sqlDB.SetMaxIdleConns(config.Config.Database.MaxIdleCons)
-	sqlDB.SetMaxOpenConns(config.Config.Database.MaxOpenCons)
-	sqlDB.SetConnMaxLifetime(time.Duration(config.Config.Database.MaxLifeTime) * time.Second)
+	sqlDB.SetMaxIdleConns(config.Config.Sql.MaxIdleCons)
+	sqlDB.SetMaxOpenConns(config.Config.Sql.MaxOpenCons)
+	sqlDB.SetConnMaxLifetime(time.Duration(config.Config.Sql.MaxLifeTime) * time.Second)
 	return dB, err
 }

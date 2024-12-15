@@ -1,9 +1,11 @@
 package config
 
-func Init() error {
+import "github.com/DnsUnlock/Dpanel/backend/utils/log"
+
+func init() {
 	err := ReadeConfig()
 	if err != nil {
-		return err
+		log.Println(log.ERROR, "配置文件读取失败", err)
 	}
-	return nil
+	log.Println(log.INFO, "配置文件读取成功")
 }

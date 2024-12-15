@@ -10,13 +10,13 @@ import (
 )
 
 func Conn() (dB *gorm.DB, err error) {
-	if err = isValidPath(config.Config.Database.Connection); err != nil {
+	if err = isValidPath(config.Config.Sql.Connection); err != nil {
 		return
 	}
-	//判断 config.Config.Database.Connection 是否为正常的文件路径
-	if _, err := os.Stat(config.Config.Database.Connection); os.IsNotExist(err) {
+	//判断 config.Config.Sql.Connection 是否为正常的文件路径
+	if _, err := os.Stat(config.Config.Sql.Connection); os.IsNotExist(err) {
 		// 文件不存在，创建空的数据库文件
-		file, err := os.Create(config.Config.Database.Connection)
+		file, err := os.Create(config.Config.Sql.Connection)
 		if err != nil {
 			fmt.Printf("无法创建数据库文件: %v\n", err)
 			return nil, err
@@ -25,7 +25,7 @@ func Conn() (dB *gorm.DB, err error) {
 		fmt.Println("数据库文件创建成功")
 	}
 	dB, err = gorm.Open(
-		sqlite.Open(config.Config.Database.Connection),
+		sqlite.Open(config.Config.Sql.Connection),
 		&gorm.Config{},
 	)
 	return

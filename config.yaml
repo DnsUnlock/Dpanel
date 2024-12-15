@@ -1,12 +1,12 @@
 port: 8080
 logger: info
-database:
-  connection: ./database/Dpanel.db
+sql:
+  connection: ./sql/Dpanel.db
   driver: sqlite
   MAX_OPEN_CONS: 100
   MAX_IDLE_CONS: 20
   MAX_LIFE_TIME: 100
-#database:
+#sql:
 #  connection: dpanel:s4GEGRX6wXzw7zEK@(10.0.0.4:3306)/dpanel?charset=utf8mb4&parseTime=True&loc=Local
 #  driver: mysql
 #  MAX_OPEN_CONS: 100

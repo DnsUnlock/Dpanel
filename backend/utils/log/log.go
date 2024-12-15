@@ -48,7 +48,7 @@ func (l *Logger) Println(s ...interface{}) {
 }
 
 var info = &Logger{
-	log.New(stdio.Out, "\r[+]", log.Ldate|log.Ltime|log.Llongfile),
+	log.New(stdio.Out, "\r[+]", log.Ldate|log.Ltime|log.Lshortfile),
 	Green,
 	nil,
 }
