@@ -3,12 +3,14 @@ logger: info
 sql:
   connection: ./sql/Dpanel.db
   driver: sqlite
+  prefix: dpanel
   MAX_OPEN_CONS: 100
   MAX_IDLE_CONS: 20
   MAX_LIFE_TIME: 100
 #sql:
 #  connection: dpanel:s4GEGRX6wXzw7zEK@(10.0.0.4:3306)/dpanel?charset=utf8mb4&parseTime=True&loc=Local
 #  driver: mysql
+#  prefix: dpanel
 #  MAX_OPEN_CONS: 100
 #  MAX_IDLE_CONS: 20
 #  MAX_LIFE_TIME: 100

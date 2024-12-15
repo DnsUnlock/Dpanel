@@ -3,7 +3,7 @@ package jwe
 import (
 	"encoding/json"
 	"errors"
-	"github.com/DnsUnlock/Dpanel/backend/model"
+	jwt2 "github.com/DnsUnlock/Dpanel/backend/model/jwt"
 	"github.com/DnsUnlock/Dpanel/backend/utils/aes"
 	"github.com/golang-jwt/jwt"
 	"time"
@@ -11,7 +11,7 @@ import (
 
 var jweKey = []byte("0ee2662765b978639f503d90e95f8fa7")
 
-func SetToken(userInfo model.Token) (string, error) {
+func SetToken(userInfo jwt2.Token) (string, error) {
 	marshal, err := json.Marshal(userInfo)
 	if err != nil {
 		return "", err
@@ -20,7 +20,7 @@ func SetToken(userInfo model.Token) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	claims := &model.Claims{
+	claims := &jwt2.Claims{
 		Token: userInfoAes,
 		StandardClaims: jwt.StandardClaims{
 			ExpiresAt: time.Now().Add(time.Hour * 24).Unix(), // 强制过期时间
@@ -37,8 +37,8 @@ func SetToken(userInfo model.Token) (string, error) {
 	return tokenString, nil
 }
 
-func GetToken(tokenString string) (c model.ClaimsInfo, err error) {
-	var d model.Claims
+func GetToken(tokenString string) (c jwt2.ClaimsInfo, err error) {
+	var d jwt2.Claims
 	token, err := jwt.ParseWithClaims(tokenString, &d, func(token *jwt.Token) (interface{}, error) {
 		return jweKey, nil
 	})
@@ -52,7 +52,7 @@ func GetToken(tokenString string) (c model.ClaimsInfo, err error) {
 		if err != nil {
 			return c, err
 		}
-		var t model.Token
+		var t jwt2.Token
 		err = json.Unmarshal([]byte(userInfo), &t)
 		if err != nil {
 			return c, err

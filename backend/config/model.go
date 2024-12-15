@@ -8,6 +8,7 @@ type config struct {
 	Sql         struct {
 		Connection  string `yaml:"connection"`    //数据库连接信息
 		Driver      string `yaml:"driver"`        //数据库驱动
+		Prefix      string `yaml:"prefix"`        //数据库表前缀
 		MaxOpenCons int    `yaml:"MAX_OPEN_CONS"` //数据库最大打开连接数
 		MaxIdleCons int    `yaml:"MAX_IDLE_CONS"` //数据库最大空闲连接数
 		MaxLifeTime int    `yaml:"MAX_LIFE_TIME"` //数据库连接最大生命周期
