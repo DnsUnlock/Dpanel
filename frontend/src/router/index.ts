@@ -1,5 +1,5 @@
 import type { App } from "vue";
-import { createRouter, createWebHistory , RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 export const Layout = () => import("@/layout/index.vue");
 

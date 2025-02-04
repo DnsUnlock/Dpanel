@@ -1,7 +1,6 @@
 import Lodash from "lodash";
 import request from "@/utils/request";
 import { useMessage } from "naive-ui";
-import Qs from "qs";
 import { onMounted, reactive, watch } from "vue";
 
 interface Config {

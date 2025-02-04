@@ -12,6 +12,8 @@ import (
 func Run() {
 	r := gin.Default()
 	r.Use(cors.Cors())
+	r.GET("/")
+
 	api.Router(r.Group("/api"))
 	err := r.Run(":" + strconv.Itoa(config.Config.Port))
 	if err != nil {

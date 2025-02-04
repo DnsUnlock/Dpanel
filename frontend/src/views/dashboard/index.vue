@@ -6,8 +6,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import {GetFingerprint, GetHash} from '@/utils/fingerprint';
+import { ref, onMounted } from "vue";
+import { GetFingerprint, GetHash } from "@/utils/fingerprint";
 
 // 定义组件选项
 defineOptions({
@@ -16,7 +16,7 @@ defineOptions({
 });
 
 // 定义响应式变量
-const visitorId = ref<string>('');
+const visitorId = ref<string>("");
 
 // 在组件挂载时加载 FingerprintJS
 onMounted(async () => {

@@ -61,6 +61,9 @@ github.com/google/pprof v0.0.0-20240827171923-fa2c70bbbfe5 h1:5iH8iuqE5apketRbSF
 github.com/google/pprof v0.0.0-20240827171923-fa2c70bbbfe5/go.mod h1:vavhavw2zAxS5dIdcRluK6cSGGPlZynqzFM8NdvU144=
 github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
 github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/gorilla/websocket v1.5.3 h1:saDtZ6Pbx/0u+bgYQ3q96pZgCzfhKXGPqt7kZ72aNNg=
+github.com/gorilla/websocket v1.5.3/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
 github.com/hpcloud/tail v1.0.0/go.mod h1:ab1qPbhIpdTxEkNHXyeSf5vhxWSCs/tWer42PpOxQnU=
 github.com/jinzhu/inflection v1.0.0 h1:K317FqzuhWc8YvSVlFMCCUb36O/S9MCKRDI7QkRKD/E=
 github.com/jinzhu/inflection v1.0.0/go.mod h1:h+uFLlag+Qp1Va5pdKtLDYj+kHp5pxUVkryuEj+Srlc=
@@ -124,6 +127,13 @@ github.com/wenlng/go-captcha/v2 v2.0.1 h1:N6XSHymJ7e9Z/LyWWTWLMAkAXtW27ZROZpvNrq
 github.com/wenlng/go-captcha/v2 v2.0.1/go.mod h1:5hac1em3uXoyC5ipZ0xFv9umNM/waQvYAQdr0cx/h34=
 github.com/yuin/goldmark v1.2.1/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.4.13/go.mod h1:6yULJ656Px+3vBD8DxQVa3kxgyrAnzto9xy5taEt/CY=
+gitoo.icu/Nexus/Nexus v0.0.0-20250101173500-436f486cc188 h1:5GeyBUaXeKGR+aI9lKNp1qhRbriy1mBP7L7UNAWMoF8=
+gitoo.icu/Nexus/Nexus v0.0.0-20250101173500-436f486cc188/go.mod h1:TNZaW9D8sZcDzNbgW6SSbknWQ51Kn+R3HZfFDAwGVyA=
+gitoo.icu/Nexus/Nexus v0.1.0 h1:Ml/1k1o1ZLWQw5fJ7mqKoV72R4GuzCHbnThJPEgZ3tE=
+gitoo.icu/Nexus/Nexus v0.1.0/go.mod h1:TNZaW9D8sZcDzNbgW6SSbknWQ51Kn+R3HZfFDAwGVyA=
+gitoo.icu/Nexus/Nexus v0.1.1 h1:PZefxzpCngApgRKElhjyVp8lcmSOu/WQvBTJMmswA1M=
+gitoo.icu/Nexus/Nexus v0.1.1/go.mod h1:TNZaW9D8sZcDzNbgW6SSbknWQ51Kn+R3HZfFDAwGVyA=
+gitoo.icu/Nexus/Nexus v0.1.6/go.mod h1:NgcksSwIL8wg0V1JCn3XmvFv6IozkewxuQzSDVH723o=
 golang.org/x/arch v0.0.0-20210923205945-b76863e36670/go.mod h1:5om86z9Hs0C8fWVUuoMHwpExlXzs5Tkyp9hOrfG7pp8=
 golang.org/x/arch v0.8.0 h1:3wRIsP3pM4yUptoR96otTUOXI367OS0+c9eeRi9doIc=
 golang.org/x/arch v0.8.0/go.mod h1:FEVrYAQjsQXMVJ1nsMoVVXPZg6p2JE2mx8psSWTDQys=
